@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ruleset name="VIP-Go-Skeleton">
+	<description>WordPress and VIP Go Coding Standards</description>
+
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+	</rule>
+
+	<rule ref="WordPress-VIP-Go" />
+
+	<rule ref="WordPressVIPMinimum" />
+
+	<rule ref="PHPCompatibility">
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+	</rule>
+
+	<config name="testVersion" value="7.0-"/>
+
+	<arg name="extensions" value="php"/>
+	<arg value="s"/>
+
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>.github/</exclude-pattern>
+
+	<exclude-pattern>mu-plugins</exclude-pattern>
+	<exclude-pattern>themes/twentytwenty</exclude-pattern>
+
+	<exclude-pattern>plugins/index.php</exclude-pattern>
+	<exclude-pattern>plugins/hello.php</exclude-pattern>
+
+</ruleset>
