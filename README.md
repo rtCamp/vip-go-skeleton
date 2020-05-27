@@ -2,7 +2,48 @@
 
 Welcome to WordPress VIP! This repository is a starting point for building your WordPress VIP application, including all the base directories.
 
-## Guidebooks
+## Environments
+
+| Environment | Branch  | URL                          |
+|-------------|---------|------------------------------|
+| Production  | master  | https://example.com          |
+| Staging     | staging | https://staging.example.com  |
+| Development | develop | https://dev.example.com      |
+
+## Maintainer
+
+### rtCamp Maintainers:
+
+| Name                    | Github Username   |
+|-------------------------|-------------------|
+| [Name](mailto:email-id) |  @github_username |
+
+### Client Representative: (if any)
+
+| Name                    | Github Username   |
+|-------------------------|-------------------|
+| [Name](mailto:email-id) |  @github_username |
+
+## Development Workflow
+
+### Default Branch
+
+`master`
+
+### Branch naming convention
+
+- For feature - `feature/issue-name` For example, `feature/add-plugin`
+- For bug - `fix/issue-name` For example, `fix/phpcs-errors`
+
+### Pull Request and issue notes
+
+- Title should be same as Issue title. Also add issue number before title. For example, `#3 Setup initial theme`.
+- Add proper description.
+- Assign code reviewer and project.
+- Create draft pull request for work in-progress PR and don't add `WIP:` in PR title.
+- PR should have one approval.
+
+## VIP-Go Guidebooks
 
 We recommend starting with one of the following WordPress VIP guidebooks:
 
@@ -25,7 +66,7 @@ All the following directories are required and must not be removed:
 
 These directories will also be available on production web servers. Any additional directories created in your GitHub repository that are not included in the above list will not be mounted onto your site, and so will not be web-accessible.
 
-For more information on how our codebase is structured, see https://docs.wpvip.com/technical-references/vip-codebase/. 
+For more information on how our codebase is structured, see https://docs.wpvip.com/technical-references/vip-codebase/.
 
 The `docs/` directory is a special directory that contains your documentation for your application. It is not mounted onto your site, but is available for you to use. See [docs/index.php](docs/index.php) for more information.
 
