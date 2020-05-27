@@ -26,6 +26,7 @@ node_modules
 
 # mu-plugins; these are managed at the platform-level
 /mu-plugins/
+mu-plugins
 
 # drop-ins; these are managed at the platform-level
 /object-cache.php
@@ -45,3 +46,13 @@ phpcs.xml
 
 # Composer (repo root only)
 /vendor/
+debug.log
+/node_modules/
+node_modules
+
+# Ignore editor config
+.idea/
+.vscode/
+
+# Other files and folders
+*.map
