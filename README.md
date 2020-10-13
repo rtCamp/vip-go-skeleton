@@ -26,6 +26,16 @@ Welcome to WordPress VIP! This repository is a starting point for building your 
 
 ## Development Workflow
 
+- Complete the features or bug fixes locally and push the branch to the GitHub repo.
+- Raise a pull request (PR) against the develop branch.
+- Assign that PR to Developer/EM for internal code review. If any code review feedback, the team needs to address it and push changes, update PR, and re-request code review.
+- PR approved: Merge that into the develop branch and it will deploy to the development site. You can review the feature there.
+- Perform internal QA on the development site.
+- Follow the same steps to deploy the changes on QA (preprod) site. Code review is not required.
+- Client will do the UAT on the QA site and they will approve.
+- Once approved, you can raise the PR against the master branch and assign a PR to Developer/EM/VIP team for the final code review.
+- PR approved: you can merge and it will deploy to the production site.
+
 ### Default Branch
 
 `master`
