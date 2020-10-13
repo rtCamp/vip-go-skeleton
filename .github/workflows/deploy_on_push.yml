@@ -13,13 +13,11 @@ jobs:
     - name: Deploy
       uses: docker://rtcamp/action-deploy-wordpress:master
       env:
-        VAULT_ADDR: ${{ secrets.VAULT_ADDR }}
-        VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         WP_VERSION: 5.5
         # MU_PLUGINS_URL: vip
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@master
       env:
         SLACK_CHANNEL: test
-        VAULT_ADDR: ${{ secrets.VAULT_ADDR }}
-        VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
