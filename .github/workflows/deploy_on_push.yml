@@ -7,11 +7,12 @@ name: Deploy and Slack Notification
 jobs:
   deploy:
     name: Deploy
-    runs-on: ubuntu-latest
+    # Change below line to: `runs-on: ubuntu-latest` if not using self-hosted runners or if it is a public repo.
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
     - name: Deploy
-      uses: docker://rtcamp/action-deploy-wordpress:master
+      uses: rtCamp/action-deploy-wordpress@master
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         WP_VERSION: 5.5.3
@@ -21,3 +22,6 @@ jobs:
       env:
         SLACK_CHANNEL: test
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    - name: Cleanup
+      if: ${{ always() }}
+      uses: rtCamp/action-cleanup@master
