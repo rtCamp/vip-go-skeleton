@@ -53,3 +53,10 @@ node_modules
 
 # Other files and folders
 *.map
+
+# Local PHPCS configuration files
+.phpcs.xml
+phpcs.xml
+
+# Composer (repo root only)
+/vendor/
