@@ -15,7 +15,7 @@
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
 	</rule>
 
-	<config name="testVersion" value="7.0-"/>
+	<config name="testVersion" value="7.4-"/>
 
 	<arg name="extensions" value="php"/>
 	<arg value="s"/>
@@ -26,6 +26,7 @@
 
 	<exclude-pattern>mu-plugins</exclude-pattern>
 	<exclude-pattern>themes/twentytwenty</exclude-pattern>
+	<exclude-pattern>themes/twentytwentytwo</exclude-pattern>
 
 	<exclude-pattern>plugins/index.php</exclude-pattern>
 	<exclude-pattern>plugins/hello.php</exclude-pattern>
