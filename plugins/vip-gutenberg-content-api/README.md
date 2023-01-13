@@ -1,1 +1,0 @@
-# vip-gutenberg-content-api
