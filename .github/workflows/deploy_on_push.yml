@@ -14,7 +14,7 @@ jobs:
     - name: Deploy
       uses: rtCamp/action-deploy-wordpress@master
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SSH_PRIVATE_KEY: ${{ secrets.ED_DEPLOYMENT_KEY }}
         WP_VERSION: latest
         MU_PLUGINS_URL: vip
     - name: Slack Notification
