@@ -39,6 +39,16 @@ mu-plugins
 .Trashes
 ehthumbs.db
 Thumbs.db
+debug.log
+/node_modules/
+node_modules
+
+# Ignore editor config
+.idea/
+.vscode/
+
+# Other files and folders
+*.map
 
 # Local PHPCS configuration files
 .phpcs.xml
