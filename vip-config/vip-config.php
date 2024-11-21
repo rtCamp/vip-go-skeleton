@@ -6,12 +6,12 @@
  * and such, we've taken care of that for you. This is a good place to define a constant or something of that
  * nature. However, consider using environment variables for anything sensitive or environment-specific:
  *
- * @see https://docs.wpvip.com/how-tos/manage-environment-variables/
+ * @see https://docs.wpvip.com/infrastructure/environments/manage-environment-variables/
  *
  * WARNING: This file is loaded very early (immediately after `wp-config.php`), which means that most WordPress APIs,
  *   classes, and functions are not available. The code below should be limited to pure PHP.
  *
- * @see https://docs.wpvip.com/technical-references/vip-codebase/vip-config-directory/
+ * @see https://docs.wpvip.com/wordpress-skeleton/vip-config-directory/
  *
  * Happy coding!
  *
@@ -19,15 +19,20 @@
  **/
 
 /**
- * Set a high default limit to avoid too many revisions from polluting the database.
+ * Limit the number of revisions retained per post.
  *
- * Posts with extremely high revisions can result in fatal errors or have performance issues.
+ * By default, all revisions are retained. Use this constant to reduce the number of revisions retained per post.
  *
- * Feel free to adjust this depending on your use cases.
+ * Feel free to adjust the value depending on your use cases (e.g. posts with a very high revision count can result in performance issues).
+ *
+ * @see https://docs.wpvip.com/wordpress-on-vip/post-revisions/
+ *
  */
+/*
 if ( ! defined( 'WP_POST_REVISIONS' ) ) {
-	define( 'WP_POST_REVISIONS', 500 );
+	define( 'WP_POST_REVISIONS', 100 );
 }
+*/
 
 /**
  * The VIP_JETPACK_IS_PRIVATE constant is enabled by default in non-production environments.
@@ -37,7 +42,7 @@ if ( ! defined( 'WP_POST_REVISIONS' ) ) {
  *
  * You can disable "private" mode (e.g. for testing) in non-production environment by setting the constant to `false` below (or just by removing the lines).
  *
- * @see https://docs.wpvip.com/technical-references/restricting-site-access/controlling-content-distribution-via-jetpack/
+ * @see https://docs.wpvip.com/wordpress-on-vip/jetpack/content-distribution/
  */
 if ( ! defined( 'VIP_JETPACK_IS_PRIVATE' ) &&
 	defined( 'VIP_GO_APP_ENVIRONMENT' ) &&
@@ -56,8 +61,8 @@ if ( ! defined( 'VIP_JETPACK_IS_PRIVATE' ) &&
  *
  * If you would like to enable Browser instrumentation, please remove the lines below.
  *
- * @see https://docs.newrelic.com/docs/agents/php-agent/features/browser-monitoring-php-agent/#disable
- * @see https://docs.wpvip.com/technical-references/tools-for-site-management/new-relic/
+ * @see https://docs.newrelic.com/docs/apm/agents/php-agent/features/browser-monitoring-php-agent/#disable
+ * @see https://docs.wpvip.com/performance/new-relic/
  */
 if ( function_exists( 'newrelic_disable_autorum' ) ) {
 	newrelic_disable_autorum();
@@ -67,7 +72,7 @@ if ( function_exists( 'newrelic_disable_autorum' ) ) {
  * Set WP_DEBUG to true for all local or non-production VIP environments to ensure
  * _doing_it_wrong() notices display in Query Monitor. This also changes the error_reporting level to E_ALL.
  *
- * @see https://wordpress.org/support/article/debugging-in-wordpress/#wp_debug
+ * @see https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/#wp_debug
  */
 if ( ( ! defined( 'VIP_GO_APP_ENVIRONMENT' ) || ( defined( 'VIP_GO_APP_ENVIRONMENT' ) && 'production' !== VIP_GO_APP_ENVIRONMENT ) )
 	&& ! defined( 'WP_DEBUG' ) ) {

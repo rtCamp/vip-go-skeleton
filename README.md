@@ -76,7 +76,7 @@ All the following directories are required and must not be removed:
 
 These directories will also be available on production web servers. Any additional directories created in your GitHub repository that are not included in the above list will not be mounted onto your site, and so will not be web-accessible.
 
-For more information on how our codebase is structured, see https://docs.wpvip.com/technical-references/vip-codebase/. 
+For more information on how our codebase is structured, see https://docs.wpvip.com/technical-references/vip-codebase/.
 
 The `docs/` directory is a special directory that contains your documentation for your application. It is not mounted onto your site, but is available for you to use. See [docs/index.php](docs/index.php) for more information.
 
