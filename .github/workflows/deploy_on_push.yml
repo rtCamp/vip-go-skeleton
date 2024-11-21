@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - develop
+      - main
 
 name: Deploy and Slack Notification
 jobs:
