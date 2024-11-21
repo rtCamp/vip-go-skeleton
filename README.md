@@ -6,7 +6,7 @@ Welcome to WordPress VIP! This repository is a starting point for building your 
 
 | Environment | Branch  | URL                          |
 |-------------|---------|------------------------------|
-| Production  | master  | https://example.com          |
+| Production  | main    | https://example.com          |
 | Staging     | staging | https://staging.example.com  |
 | Development | develop | https://dev.example.com      |
 
