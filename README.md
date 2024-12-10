@@ -6,9 +6,9 @@ Welcome to WordPress VIP! This repository is a starting point for building your 
 
 We recommend starting with one of the following WordPress VIP guidebooks:
 
-* [Local development for a WordPress VIP application](https://docs.wpvip.com/how-tos/local-development/)
-* [Development workflow for WordPress VIP](https://docs.wpvip.com/technical-references/development-workflow/)
-* [Launching a site with WordPress VIP](https://docs.wpvip.com/how-tos/launch-a-site/)
+* [Get Started](https://docs.wpvip.com/guidebooks/get-started/)
+* [Development on WordPress VIP]([https://docs.wpvip.com/technical-references/development-workflow/](https://docs.wpvip.com/guidebooks/develop-on-wpvip/))
+* [Prepare for a Site Launch](https://docs.wpvip.com/guidebooks/prepare-for-launch/)
 
 ## Directories
 
